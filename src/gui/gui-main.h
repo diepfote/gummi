@@ -44,7 +44,7 @@
 #include "gui-menu.h"
 #include "gui-project.h"
 
-#define RECENT_FILES_NUM 5
+#define RECENT_FILES_NUM 15
 #define OPEN_FILES_LIST_NUM 15
 #define TEXCOUNT_OUTPUT_LINES 7
 
@@ -87,7 +87,7 @@ struct _GummiGui {
     GtkCheckMenuItem* menu_statusbar;
     GtkCheckMenuItem* menu_rightpane;
     GtkCheckMenuItem* menu_autosync;
-    GtkMenuItem* recent[5];
+    GtkMenuItem* recent[RECENT_FILES_NUM];
     gint insens_widget_size;
     GtkWidget** insens_widgets;
     GtkBuilder *builder;
