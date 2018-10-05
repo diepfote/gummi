@@ -1,10 +1,8 @@
-# Gummi
-The simple LaTeX editor
-
-[![Build Status](https://travis-ci.com/alexandervdm/gummi.svg?branch=master)](https://travis-ci.com/alexandervdm/gummi)
-
-### Installing
-Gummi is available in the official repositories for most mayor platforms. Please check your package manager for availability or refer to our wiki for more details. 
+# Gummi - Customized for power users
+Addtions to the [original Gummi](https://github.com/alexandervdm/gummi) include:
+* commenting functionality
+* cut/duplicate/delete line
+* reopening previously open files
 
 ### Screenshot
 
@@ -12,7 +10,7 @@ Gummi is available in the official repositories for most mayor platforms. Please
 
 ### Building
 
-Building Gummi requires a working C compiler and some dependencies to be installed on beforehand. For detailed instructions and our list of dependencies, please refer to our documentation. 
+Building Gummi requires a working C compiler and some dependencies to be installed beforehand. For detailed instructions and our list of dependencies, please refer to the [documentation](https://github.com/alexandervdm/gummi/wiki/Installing-Gummi#compile-from-source).
 
 Once these prerequisities are completed, run
 
@@ -20,6 +18,17 @@ Once these prerequisities are completed, run
     ./configure
     make
 
-### Contact
+### Installing
+##### Any Linux
+After finishing the build process, run
 
-If you wish to contact me, please use the contact details on my Github profile. I can also usually be found idling on the FreeNode IRC network as 'alexandervdm'. 
+    sudo make install
+
+##### Arch Linux
+On Arch Linux use the AUR package
+
+    yaourt -S gummi-gtk2-git
+
+### Contact
+To contact the original owner, please refer to the project's [github page](https://github.com/alexandervdm/gummi).  
+To contact me, please use the email address provided on my [github profile](https://github.com/florianbegusch).
