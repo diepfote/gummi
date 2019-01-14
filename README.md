@@ -1,7 +1,7 @@
 # Gummi - Customized for power users
-Addtions to the [original Gummi](https://github.com/alexandervdm/gummi) include:
+Addtions to the [original Gummi](https://github.com/alexandervdm/gummi) include but are not limited to:
 * commenting functionality
-* cut/duplicate/delete line
+* cut/duplicate/delete line support
 * reopening previously open files
 
 ### Screenshot
