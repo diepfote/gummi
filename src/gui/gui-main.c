@@ -115,7 +115,7 @@ GummiGui* gui_init (GtkBuilder* builder) {
         gtk_statusbar_get_context_id (GTK_STATUSBAR (g->statusbar), "Gummi");
 
     gchar* tstr = 0; 
-    for (gint i = 0; i < RECENT_FILES_NUM; ++i) {
+    for (i = 0; i < RECENT_FILES_NUM; ++i) {
         tstr = g_strdup_printf ("menu_recent%d", i + 1);
         g->recent[i] =
             GTK_MENU_ITEM (gtk_builder_get_object (builder, tstr));
@@ -221,8 +221,8 @@ GummiGui* gui_init (GtkBuilder* builder) {
     if (!config_get_value ("compile_status"))
         gtk_toggle_tool_button_set_active (g->previewoff, TRUE);
 
-    tstr = 0; 
-    for (gint i = 0; i < RECENT_FILES_NUM; ++i) {
+    tstr = 0;
+    for (i = 0; i < RECENT_FILES_NUM; ++i) {
         tstr = g_strdup_printf ("recent%d", i + 1);
         g->recent_list[i] = g_strdup (config_get_value (tstr));
         g_free (tstr);
@@ -231,7 +231,7 @@ GummiGui* gui_init (GtkBuilder* builder) {
     display_recent_files (g);
 
     gchar* where;
-    for (gint i = 0; i < OPEN_FILES_LIST_NUM; ++i) {
+    for (i = 0; i < OPEN_FILES_LIST_NUM; ++i) {
         where = g_strdup_printf ("f%d", (i+1));
         g->open_files_list[i] = g_strdup (config_get_value (where));
         g_free (where);
@@ -288,7 +288,8 @@ void gui_main (GtkBuilder* builder) {
     tabs = g_list_copy (gummi_get_all_tabs ());
 
     // reopen files here
-    for (gint i = OPEN_FILES_LIST_NUM -1; i >= 0; i--) {
+    gint i;
+    for (i = OPEN_FILES_LIST_NUM -1; i >= 0; i--) {
         if (!STR_EQU (gui->open_files_list[i], "__NULL__")) {
             if (access (gui->open_files_list[i], F_OK) == -1) {
                 gui->open_files_list[i] = "__NULL__";
@@ -981,7 +982,8 @@ void file_dialog_set_filter (GtkFileChooser* dialog, GuFilterType type) {
 void write_open_files_list_to_config( void )
 {
     gchar* where;
-    for (gint i = 0; i < OPEN_FILES_LIST_NUM; i++) {
+    gint i;
+    for (i = 0; i < OPEN_FILES_LIST_NUM; i++) {
         where = g_strdup_printf ("f%d", (i+1));
         config_set_value (where, gui->open_files_list[i]);
         g_free (where);
@@ -1008,8 +1010,9 @@ void add_to_open_files_list(const gchar* filename) {
 
 void remove_from_open_files_list(const gchar* filename) {
     if (!filename) return;
-
-    for (gint i = 0; i < OPEN_FILES_LIST_NUM; i++)
+    
+    gint i;
+    for (i = 0; i < OPEN_FILES_LIST_NUM; i++)
         if (STR_EQU (filename, gui->open_files_list[i]))
             gui->open_files_list[i] = "__NULL__";
     
