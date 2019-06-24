@@ -1,3 +1,4 @@
+[![travis-ci.com](https://api.travis-ci.com/florianbegusch/gummi.svg)](https://travis-ci.com/florianbegusch/gummi)
 # Gummi - Customized for power users
 Addtions to the [original Gummi](https://github.com/alexandervdm/gummi) include but are not limited to:
 * commenting functionality
