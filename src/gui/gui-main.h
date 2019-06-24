@@ -180,4 +180,6 @@ void typesetter_setup (void);
 
 void check_preview_timer (void);
 
+void write_open_files_list_to_config (void);
+
 #endif /* __GUMMI_GUI_MAIN_H__ */
