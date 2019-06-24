@@ -297,7 +297,8 @@ void gui_main (GtkBuilder* builder) {
             }
               
             gint skip_opening_file = 0;
-            for (int inner = 0; inner  < g_list_length (tabs); inner++) {
+            gint inner;
+            for (inner = 0; inner  < g_list_length (tabs); inner++) {
                 GuTabContext* tab = GU_TAB_CONTEXT (g_list_nth_data (tabs, inner));
 
                 if (tab->editor->filename == NULL)
