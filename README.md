@@ -13,7 +13,7 @@ Addtions to the [original Gummi](https://github.com/alexandervdm/gummi) include 
 Great **snippet support**.
 
 Snippets can be customized. The config file is usually located at `$HOME/.config/gummi/snippets.cfg`.  
-My [custom snippets](https://gist.github.com/florianbegusch/3fe049230e4cdae984caa313fb6243cd) might prove useful as well.
+My [custom snippets](https://gist.github.com/diepfote/3fe049230e4cdae984caa313fb6243cd) might prove useful as well.
 
 ### Screenshot
 
@@ -46,4 +46,4 @@ On Arch Linux use the AUR package
 ## Contact
 
 To contact the original owner, please refer to the project's [github page](https://github.com/alexandervdm/gummi).
-To contact me, please use the email address provided on my [github profile](https://github.com/florianbegusch).
+To contact me, please use the email address provided on my [github profile](https://github.com/diepfote).
